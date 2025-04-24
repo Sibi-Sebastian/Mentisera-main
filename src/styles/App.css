@@ -1,0 +1,67 @@
+.hero-section {
+  background-image: url('/your-background.jpg'); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  color: white;
+  position: relative;
+}
+
+.content {
+  max-width: 800px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.from {
+  font-weight: normal;
+  color: #b9fffc;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+.tags {
+  margin: 1rem 0;
+}
+
+.tags span {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 10px;
+  margin: 0 6px 6px 0;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+.primary {
+  background-color: #00d68f;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
