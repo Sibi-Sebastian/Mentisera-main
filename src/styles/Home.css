@@ -1,40 +1,55 @@
 .hero-section {
-    position: relative;
-    background-image: url('/path/to/your/image.jpg'); /* update this with your actual path */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
-    color: white;
-    text-align: center;
-  }
-  
-  .hero-overlay {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.6); /* dark transparent overlay */
-    padding: 60px 20px;
-    border-radius: 12px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .hero-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  
-  .hero-links span {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 6px 12px;
-    background-color: #ffffff22;
-    border-radius: 8px;
-    font-size: 0.9rem;
-  }
-  
+  position: relative;
+  background-image: url('/path/to/your/image.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/*  • overlay to darken the image behind the text */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;           /* center child .content vertically */
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* push text above the overlay */
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* typography tweaks */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* subtle glow to help it pop */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* tags and buttons can stay as is, or add slight text-shadow there too */
+.tags span {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 6px 12px;
+  background-color: #ffffff22;
+  border-radius: 8px;
+}
+
+/* …your existing button styles… */

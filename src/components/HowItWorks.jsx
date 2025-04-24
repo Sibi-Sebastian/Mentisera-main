@@ -4,7 +4,7 @@ import '../styles/HowItWorks.css';
 const HowItWorks = () => {
   return (
     <section className="how-it-works">
-      <h2>How it works</h2>
+      <h2>How Mentisera Works</h2>
 
       <div className="how-wrapper">
         {/* Step-by-Step */}
