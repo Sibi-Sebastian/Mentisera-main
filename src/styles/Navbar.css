@@ -1,3 +1,5 @@
+/* Navbar styles */
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -6,20 +8,13 @@
   padding: 12px 24px;
   display: flex;
   justify-content: center;
-
-  /* ← transparent by default */
   background-color: transparent;
-  /* backdrop-filter: blur(6px); */
-
   transition: all 0.3s ease;
 }
+
 .navbar-scrolled {
-  /* change this to rgba(255,255,255,0.9) if you still want a bit of transparency */
   background-color: #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
-  /* optional: remove the blur once it’s solid */
-  backdrop-filter: none;
 }
 
 .navbar-content {
@@ -29,140 +24,155 @@
   width: 100%;
   max-width: 1280px;
 }
-  
-  .navbar-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding-right: 40px;
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 40px;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #222;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand-name:hover {
+  color: #007bff;
+}
+
+.navbar-middle {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust gap between items */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: color 0.3s ease, background 0.3s ease;
+  border-radius: 6px;
+  display: inline-flex; /* Make all items in the list behave like inline-flex */
+  align-items: center;
+}
+
+.nav-item:hover {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.05);
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.simple-search-bar {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ddd;
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.simple-search-bar:focus-within {
+  box-shadow: 0 0 0 2px #007bff30;
+}
+
+.simple-search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding-left: 8px;
+  font-size: 14px;
+  color: #333;
+  width: 160px;
+}
+
+.search-icon {
+  font-size: 16px;
+  color: #999;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.login,
+.signup {
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login {
+  border: 1px solid #007bff;
+  background: transparent;
+  color: #007bff;
+}
+
+.login:hover {
+  background: #007bff;
+  color: white;
+}
+
+.signup {
+  background: #007bff;
+  border: none;
+  color: white;
+}
+
+.signup:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
-  
-  .brand-name {
-    font-weight: 700;
-    font-size: 1.75rem;
-    color: #222;
-    letter-spacing: 0.5px;
-  }
-  
+
   .navbar-middle {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  .nav-item,
-  .nav-links li {
-    font-weight: 500;
-    font-size: 15px;
-    color: #333;
-    cursor: pointer;
-    padding: 8px 12px;
-    transition: color 0.3s ease, background 0.3s ease;
-    border-radius: 6px;
-  }
-  
-  .nav-item:hover,
-  .nav-links li:hover {
-    color: #007bff;
-    background-color: rgba(0, 123, 255, 0.05);
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .simple-search-bar {
-    display: flex;
-    align-items: center;
-    border: 1.5px solid #ddd;
-    border-radius: 999px;
-    padding: 6px 14px;
-    background: #fff;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .simple-search-bar:focus-within {
-    box-shadow: 0 0 0 2px #007bff30;
-  }
-  
-  .simple-search-bar input {
-    border: none;
-    background: transparent;
-    outline: none;
-    padding-left: 8px;
-    font-size: 14px;
-    color: #333;
-    width: 160px;
-  }
-  
-  .search-icon {
-    font-size: 16px;
-    color: #999;
-  }
-  
-  .nav-actions {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
-    margin-left: auto;
+    width: 100%;
   }
-  
-  .login,
-  .signup {
-    padding: 8px 20px;
-    border-radius: 24px;
-    font-weight: 500;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s ease;
+
+  .nav-actions {
+    align-self: flex-end;
   }
-  
-  .login {
-    border: 1px solid #007bff;
-    background: transparent;
-    color: #007bff;
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .login:hover {
-    background: #007bff;
-    color: white;
-  }
-  
-  .signup {
-    background: #007bff;
-    border: none;
-    color: white;
-  }
-  
-  .signup:hover {
-    background: #0056b3;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-content {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-    }
-  
-    .navbar-middle {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-      width: 100%;
-    }
-  
-    .nav-actions {
-      align-self: flex-end;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  
+}

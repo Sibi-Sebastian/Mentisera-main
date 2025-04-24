@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 export default function Navbar() {
@@ -14,20 +15,23 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-content">
         <div className="navbar-left">
-          <span className="brand-name">Mentisera</span>
+          <Link to="/" className="brand-name">Mentisera</Link>
         </div>
 
         <div className="navbar-middle">
-          <div className="simple-search-bar">
-            <span className="search-icon">🔍</span>
-            <input type="text" placeholder="Search..." />
-          </div>
-          <span className="nav-item dropdown">Categories</span>
-          <ul className="nav-links">
-            <li>About</li>
-            <li>Events</li>
-            <li>Team</li>
-            <li>Careers</li>
+          <ul className="nav-list">
+            <li className="nav-item">
+              <div className="simple-search-bar">
+                <span className="search-icon">🔍</span>
+                <input type="text" placeholder="Search..." />
+              </div>
+            </li>
+            {/* <li className="nav-item dropdown">Categories</li> */}
+            <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+            <li className="nav-item"><Link to="/events" className="nav-link">Events</Link></li>
+            <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
+            <li className="nav-item"><Link to="/team" className="nav-link">Team</Link></li>
+            <li className="nav-item"><Link to="/careers" className="nav-link">Careers</Link></li>
           </ul>
         </div>
 

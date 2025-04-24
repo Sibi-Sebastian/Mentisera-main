@@ -1,0 +1,82 @@
+/* Team Page */
+.team-page {
+    padding: 60px 40px;
+    background-color: #f4f6fa;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .team-page h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 50px;
+  }
+  
+  /* Grid layout - 3 per row */
+  .team-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  /* Team Member Card */
+  .team-member {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  }
+  
+  .team-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .team-info h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 8px;
+  }
+  
+  .team-info p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 6px;
+  }
+  
+  .team-info a {
+    font-size: 0.95rem;
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  .team-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .team-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .team-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
