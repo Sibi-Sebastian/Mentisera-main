@@ -11,23 +11,18 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : 'navbar-transparent'}`}>
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-content">
-        {/* Far Left: and Name */}
         <div className="navbar-left">
           <span className="brand-name">Mentisera</span>
         </div>
 
-        {/* Middle: Categories + Search + Nav links */}
         <div className="navbar-middle">
-
           <div className="simple-search-bar">
-  <span className="search-icon">🔍</span>
-  <input type="text" placeholder="Search..." />
-</div>
-<span className="nav-item dropdown">Categories</span>
-
-
+            <span className="search-icon">🔍</span>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <span className="nav-item dropdown">Categories</span>
           <ul className="nav-links">
             <li>About</li>
             <li>Events</li>
@@ -36,7 +31,6 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* Right: Auth Buttons */}
         <div className="nav-actions">
           <button className="login">Login</button>
           <button className="signup">Sign Up</button>
